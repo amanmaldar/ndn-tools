@@ -24,8 +24,8 @@
 #include "core/version.hpp"
 
 #include "ping.hpp"
-#include "statistics-collector.hpp"
-#include "tracer.hpp"
+//#include "statistics-collector.hpp"
+//#include "tracer.hpp"
 
 namespace ndn {
 namespace ping {
