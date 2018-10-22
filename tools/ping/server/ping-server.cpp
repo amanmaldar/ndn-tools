@@ -73,7 +73,7 @@ PingServer::onInterest(const Interest& interest)
   auto data = make_shared<Data>(interest.getName());
 
     //auto hopCountTag = interest.getTag<lp::HopCountTag>();
-	data->setTag(make_shared<lp::HopCountTag>(interest.getTag<lp::HopCountTag>());
+	//data->setTag(make_shared<lp::HopCountTag>(interest.getTag<lp::HopCountTag>());
 
 	time::milliseconds timestamp = time::toUnixTimestamp(time::system_clock::now());
 	auto timeNow = timestamp.count();
