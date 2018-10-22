@@ -23,6 +23,8 @@
 #include "ping-server.hpp"
 
 #include <ndn-cxx/security/signing-helpers.hpp>
+
+#include "generic-link-service.hpp"
 #include <ndn-cxx/lp/tags.hpp>
 
 
