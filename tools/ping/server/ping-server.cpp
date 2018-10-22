@@ -23,6 +23,8 @@
 #include "ping-server.hpp"
 
 #include <ndn-cxx/security/signing-helpers.hpp>
+#include <ndn-cxx/lp/tags.hpp>
+
 
 namespace ndn {
 namespace ping {
@@ -73,10 +75,10 @@ PingServer::onInterest(const Interest& interest)
   auto data = make_shared<Data>(interest.getName());
 
     //auto hopCountTag = interest.getTag<lp::HopCountTag>();
-	using namespace nfd;
-	data->setTag(make_shared<nfd::lp::HopCountTag>(interest.getTag<nfd::lp::HopCountTag>());
+	//using namespace nfd;
+	data->setTag(make_shared<lp::HopCountTag>(interest.getTag<lp::HopCountTag>());
 
-	using namespace ndn;
+	//using namespace ndn;
 
   data->setFreshnessPeriod(m_options.freshnessPeriod);
   data->setContent(m_payload);
