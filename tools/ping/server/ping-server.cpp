@@ -75,13 +75,7 @@ PingServer::onInterest(const Interest& interest)
     //auto hopCountTag = interest.getTag<lp::HopCountTag>();
 	data->setTag(make_shared<nfd::face::lp::HopCountTag>(interest.getTag<nfd::face::lp::HopCountTag>());
 
-	/*
-	time::milliseconds timestamp = time::toUnixTimestamp(time::system_clock::now());
-	auto timeNow = timestamp.count();
-	auto fwdlatencyTag = interest.getTag<lp::LatencyTag>();	
-	fwdDiff = (timeNow - interestTag);
-	data->setTag(make_shared<lp::LatencyTag>(fwdDiff));	  // not necessary
-	*/
+	
 
   data->setFreshnessPeriod(m_options.freshnessPeriod);
   data->setContent(m_payload);
