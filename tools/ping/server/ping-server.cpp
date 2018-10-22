@@ -73,7 +73,7 @@ PingServer::onInterest(const Interest& interest)
   auto data = make_shared<Data>(interest.getName());
 
     //auto hopCountTag = interest.getTag<lp::HopCountTag>();
-	data->setTag(make_shared<nfd::face::lp::HopCountTag>(interest.getTag<nfd::face::lp::HopCountTag>());
+	data->setTag(make_shared<::nfd::face::lp::HopCountTag>(interest.getTag<::nfd::face::lp::HopCountTag>());
 
 	
 
